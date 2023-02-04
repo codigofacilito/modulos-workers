@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login form example -->
+  <main>
+    <form action="#">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" autofocus>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+      <input type="submit" value="Iniciar sesión">
+    </form>
+
+    <div class="actions">
+      <button id="disable">Disable</button>
+      <button id="disable-freeze">Disable and freeze</button>
+    </div>
+  </main>
+
+  <script>
+    let form = document.querySelector("form");
+    document.querySelector("#disable").addEventListener("click",function(){
+      form.querySelector("input[type=submit]").disabled = true;
+      setTimeout(
+        function(){
+          form.querySelector("input[type=submit]").disabled = false;
+        }, 500
+      );
+    });
+
+    document.querySelector("#disable-freeze").addEventListener("click", function () {
+      form.querySelector("input[type=submit]").disabled = true;
+      setTimeout(
+        function () {
+          form.querySelector("input[type=submit]").disabled = false;
+        }, 500
+      );
+      operationCostosa();
+    });
+
+    // Una función que realiza una operación costosa
+    function operationCostosa() {
+        for (let i = 0; i < 1000000; i++) {
+          // hacer algo costoso
+          console.log(i)
+        }
+      }
+  </script>
+</body>
+</html>

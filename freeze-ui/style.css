@@ -1,0 +1,98 @@
+/* Import and use montserrat from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+  /* Light background color with purple tint */
+  background-color: #f2e6ff;
+  /* Dark purple color */
+  color: #4d0099;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  /* Center the content */
+  margin: 0 auto;
+  /* Set the max width of the content */
+  max-width: 400px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+form {
+  background-color: #4d0099;
+  /* Add some padding to the content */
+  padding: 20px;
+  border-radius: 10px;
+  /* Material design like box shadow with purple tint */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #f2e6ff;
+}
+
+form input {
+  display: block;
+  width: 100%;
+}
+
+input[type="text"] {
+  /* Material design like input */
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid #ff4081;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+  padding: 10px 5px;
+}
+
+input[type="text"]:invalid {
+  /* Material design like input */
+  border: 3px solid #ff4081;
+}
+
+
+/* Material design like button */
+button,
+input[type="submit"] {
+  /* Pink background color */
+  background-color: #ff4081;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  /* Darker pink background color */
+  background-color: #ff2d6f;
+  /* Box shadow */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+button:disabled, input[type="submit"]:disabled{
+  opacity: 0.5;
+  /* Dark grey */
+  background-color: #999;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+}

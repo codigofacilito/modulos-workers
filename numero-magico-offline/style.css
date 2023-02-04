@@ -1,0 +1,53 @@
+/* Import monserrat and use it as font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;    
+    margin: 0;
+    padding: 0;
+
+    /* Set the background color to light grey with purple tint */
+    background-image: linear-gradient(#e6dafe 0%, #c592ef 100%);
+    /* Set color to dark purple */
+    color: #2d2d2d;
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:1em;
+  transition: 0.2s ease-in;
+}
+
+main.success{
+  /* green background color */
+  background-color: #a1e8a1;
+}
+
+main > *{
+  width: 300px;
+}
+input{
+  padding: 10px 15px;
+  border: 0;
+  border-bottom: solid 1px #2d2d2d;
+}
+.big{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin:0;
+}
+button{
+  padding: 10px 15px;
+  border: 0;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
